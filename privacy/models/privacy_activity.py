@@ -45,6 +45,12 @@ class PrivacyActivity(models.Model):
         default="[]",
         help="Selection filter to find specific subjects included.",
     )
+    company_id = fields.Many2one(
+        'res.company',
+        string='Company',
+        required=True,
+        default=lambda self: self.env['res.company']._company_default_get('account.account')
+    )
 
     @api.model
     def _default_controller_id(self):
