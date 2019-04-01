@@ -57,7 +57,7 @@
                           name="processor_ids"
                           widget="many2many"
                       >
-                      <tree string="processors">
+                      <tree name="processors" string="processors">
                         <field name="name"/>
                         <field name="email"/>
                         <field name="country_id"/>
